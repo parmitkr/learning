@@ -2,9 +2,17 @@ package com.learning.boot.learning.user;
 
 import java.util.Date;
 
+import javax.annotation.Generated;
+import javax.persistence.Id;
+import javax.validation.constraints.Size;
+
+
+@javax.persistence.Entity
 public class User {
-	
+	@Id
+	@Generated(value = { "" })
 	private Integer id;
+	@Size(min=2)
 	private String name;
 	private Date dob;
 	
@@ -12,7 +20,7 @@ public class User {
 	
 	
 	
-	public User(int id, String name, Date dob) {
+	public User(Integer id, String name, Date dob) {
 		super();
 		this.id = id;
 		this.name = name;
